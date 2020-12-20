@@ -1,0 +1,7 @@
+// Actions Type
+export const STUDENT_ADD = 'STUDENT_ADD';
+export const STUDENT_GET_ALL = 'STUDENT_GET_ALL';
+export const STUDENT_GET = 'STUDENT_GET';
+export const STUDENT_FETCHING = 'STUDENT_FETCHING';
+export const STUDENT_NOTFOUND = 'STUDENT_NOTFOUND';
+export const STUDENT_DELETE = 'STUDENT_DELETE';

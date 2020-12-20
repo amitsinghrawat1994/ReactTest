@@ -1,0 +1,6 @@
+// Actions Type
+export const TEACHER_ALL = "TEACHER_ALL";
+export const TEACHER_ADD_SUBJECT = 'TEACHER_ADD_SUBJECT';
+export const TEACHER_NOTFOUND = "TEACHER_NOTFOUND";
+export const TEACHER_DELETE = "TEACHER_DELETE";
+export const TEACHER_ADD = "TEACHER_ADD";
