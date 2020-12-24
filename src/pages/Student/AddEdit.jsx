@@ -11,11 +11,11 @@ import {
 } from '@material-ui/core';
 import { Formik } from 'formik';
 import React, { useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import * as Yup from 'yup';
 import PersonIcon from '@material-ui/icons/Person';
-
 import { studentAction } from '../../redux/student/action';
+import { useDispatch } from '../../utils/react-redux-hooks';
 import { subjectAction } from '../../redux/subject/action';
 
 const useStyles = makeStyles((theme) => ({
@@ -39,6 +39,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const AddEdit = ({ history, match }) => {
+  const dispatch = useDispatch();
   const initialValues = {
     name: '',
     address: '',
@@ -53,10 +54,6 @@ const AddEdit = ({ history, match }) => {
 
   subjects = useSelector((state) => state.subject.subjects);
 
-  const dispatch = useDispatch();
-
-  useEffect(() => dispatch(subjectAction.getAllSubject()), []);
-
   const validationSchema = Yup.object().shape({
     name: Yup.string().required('Required'),
     address: Yup.string().required('Required')
@@ -64,7 +61,6 @@ const AddEdit = ({ history, match }) => {
 
   function onSubmit(fields, { setStatus, setSubmitting }) {
     setStatus();
-    console.log(JSON.stringify(fields, null, 2));
     if (isAddMode) {
       createUser(fields, setSubmitting);
     } else {
@@ -94,6 +90,14 @@ const AddEdit = ({ history, match }) => {
     });
     setSubjects(subjects);
   };
+
+  const initDispatch = () => {
+    dispatch(subjectAction.getAllSubject());
+  };
+
+  useEffect(() => {
+    initDispatch();
+  }, []);
 
   return (
     <>

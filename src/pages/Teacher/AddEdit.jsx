@@ -72,7 +72,6 @@ const AddEdit = ({ history }) => {
                 onSubmit={(values, { setSubmitting }) => {
                   setSubmitting(true);
                   addTeacher(values.name);
-                  console.log(values);
                 }}
                 validationSchema={Yup.object().shape({
                   name: Yup.string().required('Required')

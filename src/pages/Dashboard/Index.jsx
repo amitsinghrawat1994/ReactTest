@@ -1,8 +1,9 @@
 import { Grid, Paper, Typography } from '@material-ui/core';
-import React from 'react';
+import React, { useEffect } from 'react';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import AssignmentIndIcon from '@material-ui/icons/AssignmentInd';
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from '../../utils/react-redux-hooks';
 
 const useStyles = (theme) => ({
   root: {
@@ -19,9 +20,13 @@ const useStyles = (theme) => ({
   },
   paper: {
     padding: 3,
-    textAlign: 'left',
+    textAlign: 'left'
+  },
+  paperAlign: {
+    padding: '20px',
+    background: '#FFBF55',
     '&:hover': {
-      cursor: 'pointer'
+      background: 'green'
     }
   },
   rangeLabel: {
@@ -35,15 +40,6 @@ const useStyles = (theme) => ({
     alignItems: 'center',
     marginTop: 32
   },
-  outlinedButtom: {
-    textTransform: 'uppercase',
-    margin: 1
-  },
-  actionButtom: {
-    textTransform: 'uppercase',
-    margin: 1,
-    width: 152
-  },
   blockCenter: {
     padding: 2,
     textAlign: 'center'
@@ -54,12 +50,13 @@ const useStyles = (theme) => ({
   box: {
     marginBottom: 40,
     height: 65
-  },
+  }
 });
 
 export const Dashboard = () => {
   const classes = useStyles();
   let history = useHistory();
+  const dispatch = useDispatch();
 
   const handleClose = (text) => {
     if (text === 'teacher') {
@@ -88,7 +85,10 @@ export const Dashboard = () => {
           <Paper
             style={{
               padding: '20px',
-              background: '#FFBF55'
+              background: '#FFBF55',
+              '&:hover': {
+                background: 'green'
+              }
             }}
             className={classes.paper}
             onClick={() => {
