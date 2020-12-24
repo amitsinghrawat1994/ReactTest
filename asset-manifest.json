@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/http//amitsinghrawt99.github.io/myapp/static/css/main.b89a2a4f.chunk.css",
+    "main.js": "/http//amitsinghrawt99.github.io/myapp/static/js/main.b3c27bd0.chunk.js",
+    "main.js.map": "/http//amitsinghrawt99.github.io/myapp/static/js/main.b3c27bd0.chunk.js.map",
+    "runtime-main.js": "/http//amitsinghrawt99.github.io/myapp/static/js/runtime-main.1bacb09c.js",
+    "runtime-main.js.map": "/http//amitsinghrawt99.github.io/myapp/static/js/runtime-main.1bacb09c.js.map",
+    "static/js/2.88fdda83.chunk.js": "/http//amitsinghrawt99.github.io/myapp/static/js/2.88fdda83.chunk.js",
+    "static/js/2.88fdda83.chunk.js.map": "/http//amitsinghrawt99.github.io/myapp/static/js/2.88fdda83.chunk.js.map",
+    "index.html": "/http//amitsinghrawt99.github.io/myapp/index.html",
+    "static/css/main.b89a2a4f.chunk.css.map": "/http//amitsinghrawt99.github.io/myapp/static/css/main.b89a2a4f.chunk.css.map",
+    "static/js/2.88fdda83.chunk.js.LICENSE.txt": "/http//amitsinghrawt99.github.io/myapp/static/js/2.88fdda83.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1bacb09c.js",
+    "static/js/2.88fdda83.chunk.js",
+    "static/css/main.b89a2a4f.chunk.css",
+    "static/js/main.b3c27bd0.chunk.js"
+  ]
+}
