@@ -5,6 +5,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import { Button, Menu, MenuItem } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 import SchoolIcon from '@material-ui/icons/School';
+import HomeIcon from '@material-ui/icons/Home';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -45,6 +46,15 @@ export const NavBar = () => {
         <Toolbar>
           <div className={classes.menuRight}>
             <Button
+              title={'Home'}
+              onClick={() => {
+                history.push('/');
+              }}
+            >
+              <HomeIcon />
+            </Button>
+            <Button
+              title={'Choose option'}
               aria-controls="simple-menu"
               aria-haspopup="true"
               onClick={handleClick}
