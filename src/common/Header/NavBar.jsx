@@ -6,6 +6,7 @@ import { Button, Menu, MenuItem } from '@material-ui/core';
 import { useHistory } from 'react-router-dom';
 import SchoolIcon from '@material-ui/icons/School';
 import HomeIcon from '@material-ui/icons/Home';
+import KeyboardBackspaceIcon from '@material-ui/icons/KeyboardBackspace';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -44,6 +45,16 @@ export const NavBar = () => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
+          <div>
+            <Button
+              title={'Back'}
+              onClick={() => {
+                history.goBack();
+              }}
+            >
+              <KeyboardBackspaceIcon />
+            </Button>
+          </div>
           <div className={classes.menuRight}>
             <Button
               title={'Home'}
