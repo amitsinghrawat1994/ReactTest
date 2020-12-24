@@ -87,7 +87,6 @@ const AddEdit = ({ history, match }) => {
   function updateUser(id, fields, setSubmitting) {}
 
   const handleCheckBoxClick = (e) => {
-    console.log(e);
     subjects.forEach((subject) => {
       if (subject.id === +e.target.value) {
         subject.ischecked = e.target.checked;
@@ -160,9 +159,7 @@ const AddEdit = ({ history, match }) => {
                         autoFocus
                       />
                       <br />
-                      <Typography variant="h6" gutterBottom>
-                        Add / Modify Subject
-                      </Typography>
+                      <Typography variant="h6">Add / Modify Subject</Typography>
                       <ul className="subject">
                         {subjects.map((subject) => {
                           return (
@@ -175,6 +172,7 @@ const AddEdit = ({ history, match }) => {
                         })}
                       </ul>
                       <Button
+                        style={{ marginRight: '10px' }}
                         type="button"
                         variant="contained"
                         color="primary"

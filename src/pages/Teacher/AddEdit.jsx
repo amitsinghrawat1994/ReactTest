@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import PersonIcon from '@material-ui/icons/Person';
 import { Formik } from 'formik';
-import * as _ from 'lodash';
+//import * as _ from 'lodash';
 import * as Yup from 'yup';
 import {
   Avatar,
-  Checkbox,
   Container,
   CssBaseline,
-  FormControlLabel,
   Grid,
   Typography
 } from '@material-ui/core';
@@ -85,12 +83,9 @@ const AddEdit = ({ history }) => {
                     values,
                     touched,
                     errors,
-                    dirty,
-                    isSubmitting,
                     handleChange,
                     handleBlur,
-                    handleSubmit,
-                    handleReset
+                    handleSubmit
                   } = props;
                   return (
                     <form
@@ -114,8 +109,18 @@ const AddEdit = ({ history }) => {
                         autoFocus
                       />
                       <Button
+                        style={{ marginRight: '10px' }}
+                        type="button"
+                        variant="contained"
+                        color="primary"
+                        className={classes.submit}
+                        onClick={() => history.push('/teacher')}
+                      >
+                        Cancel
+                      </Button>
+
+                      <Button
                         type="submit"
-                        fullWidth
                         variant="contained"
                         color="primary"
                         className={classes.submit}

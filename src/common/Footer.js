@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <Paper variant="outlined" square>
       <div>
-        <p>@ footer</p>
+        <p></p>
       </div>
     </Paper>
   );

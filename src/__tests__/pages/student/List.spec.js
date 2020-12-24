@@ -81,8 +81,11 @@ describe('<List>', () => {
 
     it('Remove student button click', () => {
       const button = component.find('button[data-test="btn_delete_0"]');
-      button.simulate('click');
+      button.at(0).simulate('click');
       expect(window.confirm).toBeCalled();
+      // // component.update();
+      // // let wrapper =  component.find('tr[data-test="_stuRow"]');
+      // // expect(wrapper.hostNodes()).toHaveLength(students.length-1);
     });
   });
 });

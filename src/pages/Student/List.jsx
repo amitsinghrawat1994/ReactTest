@@ -45,10 +45,16 @@ const List = ({ match }) => {
 
   return (
     <>
-      <Container maxWidth={false} className={classes.container} data-test="studentListComponent">
-        <Typography data-test="studentTopHeader" variant="h4">
-          Students
-        </Typography>
+      <Container
+        maxWidth={false}
+        className={classes.container}
+        data-test="studentListComponent"
+      >
+        <div className={'center'}>
+          <Typography data-test="studentTopHeader" variant="h4">
+            Students
+          </Typography>
+        </div>
         <Grid container spacing={3}>
           <Grid item md={12}>
             <Grid item>

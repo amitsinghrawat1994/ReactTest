@@ -24,3 +24,6 @@ yarn-error.log*
 .vs/slnx.sqlite
 .vs/VSWorkspaceState.json
 .vs/reactdemo/v16/.suo
+/.firebase
+.firebaserc
+firebase.json
